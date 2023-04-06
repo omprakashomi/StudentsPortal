@@ -1,0 +1,66 @@
+<!-- <div fxLayoutAlign="center center" fxFlexFill class="main-div">
+    <mat-card fxFlex="25">
+        <mat-toolbar color="primary">Registration Page</mat-toolbar>
+        <form fxLayoutAlign="stretch" fxLayout="column" class="login-form" [formGroup]="formGroup" (ngSubmit)="signUpProcess()">
+            <mat-form-field>
+              <input matInput placeholder="First Name" formControlName="firstName">
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput placeholder="Last Name" formControlName="lastName">
+              </mat-form-field>
+
+              <mat-form-field>
+                <input matInput placeholder="User Name (E-mail)" formControlName="email">
+              </mat-form-field>
+
+            <mat-form-field>
+                <input matInput type="password" placeholder="Password" formControlName="password">
+            </mat-form-field>
+            <button mat-raised-button type="submit">Sign Up</button>
+          </form>
+
+    </mat-card>
+</div> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<div class="bg-white py-6 sm:py-8 lg:py-12">
+  <div class="max-w-screen-2xl px-4 md:px-8 mx-auto">
+    <h2 class="text-gray-800 text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-8">Register</h2>
+
+    <form class="max-w-lg border rounded-lg mx-auto" [formGroup]="formGroup" (ngSubmit)="signUpProcess()">
+      <div class="flex flex-col gap-4 p-4 md:p-8">
+        <div>
+          <label for="firstName" class="inline-block text-gray-800 text-sm sm:text-base mb-2">First Name</label>
+          <input name="firstName" placeholder="First Name" formControlName="firstName" class="w-full bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2" />
+        </div>
+
+        <div>
+          <label for="lastName" class="inline-block text-gray-800 text-sm sm:text-base mb-2">Last Name</label>
+          <input name="lastName" placeholder="last Name" formControlName="lastName" class="w-full bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2" />
+        </div>
+
+        <div>
+          <label for="username" class="inline-block text-gray-800 text-sm sm:text-base mb-2">User Name</label>
+          <input name="username" placeholder="Email" formControlName="email" class="w-full bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2" />
+        </div>
+
+        <div>
+          <label for="password" class="inline-block text-gray-800 text-sm sm:text-base mb-2">Password</label>
+          <input type="password" placeholder="Password" name="password" formControlName="password" class="w-full bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2" />
+        </div>
+
+        <!-- <div>
+          <label for="confirmPassword" class="inline-block text-gray-800 text-sm sm:text-base mb-2">Confirm Password</label>
+          <input type="password" placeholder="Confirm Password" name="confirmPassword" class="w-full bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2" />
+        </div> -->
+
+        <button class="block bg-gray-800 hover:bg-gray-700 active:bg-gray-600 focus-visible:ring ring-gray-300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3">Register</button>
+      </div>
+      <div class="flex justify-center items-center bg-gray-100 p-4">
+        <p class="text-gray-500 text-sm text-center">Already have an account? <button routerLink="/" class="text-indigo-500 hover:text-indigo-600 active:text-indigo-700 transition duration-100">Log In</button></p>
+      </div>
+    </form>
+  </div>
+</div>
